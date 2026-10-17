@@ -2,9 +2,41 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora de Notas Instituto i3</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Calculadora de Notas Instituto i3</h1>
+  <main class="pagina">
+    <h1>Calculadora de Notas Instituto i3</h1>
+
+    <form id="formNotas" novalidate>
+      <label for="nombre">Nombre del estudiante</label>
+      <input type="text" id="nombre" autocomplete="off">
+
+      <div class="notas">
+        <div>
+          <label for="nota1">Nota 1</label>
+          <input type="number" id="nota1" step="any" placeholder="0 a 5">
+        </div>
+        <div>
+          <label for="nota2">Nota 2</label>
+          <input type="number" id="nota2" step="any" placeholder="0 a 5">
+        </div>
+        <div>
+          <label for="nota3">Nota 3</label>
+          <input type="number" id="nota3" step="any" placeholder="0 a 5">
+        </div>
+      </div>
+
+      <button type="submit" id="btnCalcular">Calcular</button>
+    </form>
+
+    <div id="errores" class="errores" role="alert"></div>
+    <div id="resultado" class="resultado" aria-live="polite"></div>
+  </main>
+
+  <script src="validaciones.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
