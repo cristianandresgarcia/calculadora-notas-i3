@@ -1,1 +1,141 @@
+/* Estilos - Integrante 3 */
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f1f5f7;
+  color: #14213d;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.4;
+}
+
+.pagina {
+  max-width: 460px;
+  margin: 40px auto;
+  padding: 28px 28px 32px;
+  background: #ffffff;
+  border-top: 6px solid #0b7a75;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #14213d;
+}
+
+label {
+  display: block;
+  margin: 16px 0 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #b7c4cc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: inherit;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid #0b7a75;
+  outline-offset: 2px;
+}
+
+.notas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background: #0b7a75;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #095e5a;
+}
+
+.errores p {
+  margin: 16px 0 0;
+  padding: 8px 12px;
+  border-left: 4px solid #b3261e;
+  background: #fbeceb;
+  color: #8c1d18;
+  font-size: 0.9rem;
+}
+
+.resultado:empty {
+  display: none;
+}
+
+.resultado {
+  margin-top: 28px;
+  padding-left: 16px;
+  border-left: 6px solid #b7c4cc;
+}
+
+.resultado p {
+  margin: 0;
+}
+
+.etiqueta {
+  color: #4a5a6a;
+  font-size: 0.9rem;
+}
+
+.promedio {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.estado {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.resultado.aprobado {
+  border-left-color: #1e7a46;
+  color: #1e7a46;
+}
+
+.resultado.reprobado {
+  border-left-color: #b3261e;
+  color: #b3261e;
+}
+
+.resultado.aprobado .etiqueta,
+.resultado.reprobado .etiqueta {
+  color: #4a5a6a;
+}
+
+@media (max-width: 420px) {
+  .pagina {
+    margin: 0;
+    padding: 20px 16px 28px;
+  }
+
+  .notas {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
